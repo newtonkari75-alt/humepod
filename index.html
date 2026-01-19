@@ -36,7 +36,7 @@
     -->
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://placehold.co/32x32?text=H">
+    <link rel="icon" type="image/png" href="images/favcon-hume.png">
 
     <!-- Open Graph / Facebook (Social Sharing) -->
     <meta property="og:type" content="product">
@@ -354,56 +354,83 @@
                 </div>
             </section>
 
-            <!-- WRIST BAND UPSELL SECTION (NEW) - ID ADDED -->
-            <section id="wrist-band-section" class="bg-white py-12 px-5 border-t border-gray-200">
-                <div class="max-w-4xl mx-auto text-center">
+            <!-- WRIST BAND UPSELL SECTION (UPDATED: DARK MODE DIVIDER) -->
+            <section id="wrist-band-section" class="bg-brand-dark py-16 px-5 border-t-4 border-blue-900 relative overflow-hidden">
+                <!-- Decorative Background Element -->
+                <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+                    <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-500 blur-3xl"></div>
+                    <div class="absolute top-1/2 -left-24 w-72 h-72 rounded-full bg-purple-500 blur-3xl"></div>
+                </div>
+
+                <div class="max-w-5xl mx-auto text-center relative z-10">
                     
-                    <!-- NEW: Small Carousel for Band -->
-                    <div class="js-carousel relative w-full max-w-sm mx-auto aspect-square rounded-xl shadow-md border border-gray-100 overflow-hidden bg-gray-50 mb-8">
-                        <img src="images/hume-band (1).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-100" alt="Hume Band 1">
-                        <img src="images/hume-band (2).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 2">
-                        <img src="images/hume-band (3).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 3">
-                        <img src="images/hume-band (4).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 4">
-                        <img src="images/hume-band (5).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 5">
-                        <img src="images/hume-band (6).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 6">
+                    <!-- Section Tag -->
+                    <div class="inline-block mb-6">
+                        <span class="py-1 px-3 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-200 text-xs font-bold uppercase tracking-widest">
+                            O Par Perfeito
+                        </span>
                     </div>
 
-                    <!-- Headline -->
-                    <h2 class="text-2xl md:text-3xl font-black text-brand-dark mb-4 tracking-tight" data-i18n="band_section_title">
-                        De Leituras Pontuais Para Visão Contínua
-                    </h2>
-                    
-                    <!-- Text -->
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto" data-i18n="band_section_text">
-                        O Hume Pod mostra como seu corpo está. A Hume Health Wrist Band mostra como ele se comporta ao longo do dia. <br class="hidden md:block">Juntos, eles formam um sistema completo de acompanhamento corporal — em casa e em movimento.
-                    </p>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        
+                        <!-- Left: Visuals -->
+                        <div class="order-2 lg:order-1">
+                             <!-- NEW: Small Carousel for Band (White bg container for contrast) -->
+                            <div class="js-carousel relative w-full max-w-sm mx-auto aspect-square rounded-2xl shadow-2xl border-4 border-white/10 overflow-hidden bg-white/5 backdrop-blur-sm">
+                                <img src="images/hume-band (1).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-100" alt="Hume Band 1">
+                                <img src="images/hume-band (2).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 2">
+                                <img src="images/hume-band (3).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 3">
+                                <img src="images/hume-band (4).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 4">
+                                <img src="images/hume-band (5).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 5">
+                                <img src="images/hume-band (6).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 6">
+                            </div>
+                            <p class="text-xs text-blue-300/60 mt-4 italic font-medium" data-i18n="band_note">
+                                “Recomendado para quem deseja acompanhar tendências ao longo do tempo.”
+                            </p>
+                        </div>
 
-                    <!-- Bullets -->
-                    <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mb-10 text-left md:text-center flex-wrap">
-                        <div class="flex items-center gap-2 md:justify-center bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
-                            <i class="fas fa-check text-brand-dark text-sm"></i>
-                            <span class="text-gray-700 font-medium text-sm md:text-base" data-i18n="band_bullet_1">Monitoramento diário de atividade e padrões físicos</span>
+                        <!-- Right: Copy -->
+                        <div class="text-left order-1 lg:order-2">
+                            <!-- Headline -->
+                            <h2 class="text-3xl md:text-4xl font-black text-white mb-6 leading-tight tracking-tight" data-i18n="band_section_title">
+                                De Leituras Pontuais <br><span class="text-blue-400">Para Visão Contínua</span>
+                            </h2>
+                            
+                            <!-- Text -->
+                            <p class="text-lg text-blue-100 mb-8 leading-relaxed" data-i18n="band_section_text">
+                                O Hume Pod mostra como seu corpo está agora. <br>A <strong>Hume Health Wrist Band</strong> mostra como ele se comporta ao longo do dia e da noite.
+                            </p>
+
+                            <!-- Bullets (Translucent dark mode style) -->
+                            <div class="space-y-4 mb-10">
+                                <div class="flex items-start gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition">
+                                    <div class="bg-blue-500/20 p-2 rounded-lg text-blue-300">
+                                        <i class="fas fa-heart-pulse"></i>
+                                    </div>
+                                    <span class="text-gray-200 font-medium text-sm md:text-base self-center" data-i18n="band_bullet_1">Monitoramento diário de atividade e padrões físicos</span>
+                                </div>
+                                <div class="flex items-start gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition">
+                                     <div class="bg-blue-500/20 p-2 rounded-lg text-blue-300">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </div>
+                                    <span class="text-gray-200 font-medium text-sm md:text-base self-center" data-i18n="band_bullet_2">Complementa os dados do Hume Pod</span>
+                                </div>
+                                <div class="flex items-start gap-4 bg-white/5 p-4 rounded-xl border border-white/10 hover:bg-white/10 transition">
+                                     <div class="bg-blue-500/20 p-2 rounded-lg text-blue-300">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <span class="text-gray-200 font-medium text-sm md:text-base self-center" data-i18n="band_bullet_3">Ideal para quem valoriza consistência, não achismo</span>
+                                </div>
+                            </div>
+
+                            <!-- CTA - OPENS IN NEW TAB -->
+                            <a href="https://www.knownwalk.com/2JCZKZ1X/2266H7JW/" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-white text-brand-dark text-lg font-black py-4 px-8 rounded-xl shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:scale-105 transition transform active:scale-95 no-underline cursor-pointer">
+                                <i class="fas fa-plus-circle mr-2.5 text-blue-600"></i>
+                                <span data-i18n="band_cta_button">Adicionar Wrist Band e Ter o Kit Completo</span>
+                            </a>
                         </div>
-                        <div class="flex items-center gap-2 md:justify-center bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
-                             <i class="fas fa-check text-brand-dark text-sm"></i>
-                            <span class="text-gray-700 font-medium text-sm md:text-base" data-i18n="band_bullet_2">Complementa os dados do Hume Pod</span>
-                        </div>
-                        <div class="flex items-center gap-2 md:justify-center bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
-                             <i class="fas fa-check text-brand-dark text-sm"></i>
-                            <span class="text-gray-700 font-medium text-sm md:text-base" data-i18n="band_bullet_3">Ideal para quem valoriza consistência, não achismo</span>
-                        </div>
+
                     </div>
-
-                    <!-- CTA - OPENS IN NEW TAB -->
-                    <a href="https://www.knownwalk.com/2JCZKZ1X/2266H7JW/" target="_blank" class="inline-flex items-center justify-center bg-white border-2 border-brand-dark text-brand-dark text-lg font-bold py-3 px-8 rounded-xl shadow-md hover:bg-gray-50 transition transform active:scale-95 mb-4 no-underline cursor-pointer">
-                        <i class="fas fa-clock mr-2"></i>
-                        <span data-i18n="band_cta_button">Adicionar Wrist Band e Ter o Kit Completo</span>
-                    </a>
-
-                    <!-- Discrete Visual Note -->
-                    <p class="text-xs text-gray-400 italic mt-2 font-medium" data-i18n="band_note">
-                        “Recomendado para quem deseja acompanhar tendências ao longo do tempo.”
-                    </p>
                 </div>
             </section>
 
