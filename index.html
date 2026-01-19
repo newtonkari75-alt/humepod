@@ -361,7 +361,7 @@
                 </div>
             </section>
 
-            <!-- WRIST BAND UPSELL SECTION (UPDATED: MOBILE LAYOUT ADJUSTMENT) -->
+            <!-- WRIST BAND UPSELL SECTION (UPDATED: MOBILE LAYOUT & IMAGE FIX) -->
             <section id="wrist-band-section" class="bg-brand-dark py-16 px-5 border-t border-gray-900 relative overflow-hidden">
                 <!-- Decorative Background Element (Monochrome) -->
                 <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-5 pointer-events-none">
@@ -382,8 +382,8 @@
                         
                         <!-- Left: Visuals (Desktop Only - hidden on mobile) -->
                         <div class="hidden lg:block relative group order-2 lg:order-1">
-                             <!-- Desktop Carousel -->
-                            <div class="js-carousel relative w-full aspect-square rounded-full border border-white/10 bg-black overflow-hidden hover:border-white/20 transition-all duration-500">
+                             <!-- Desktop Carousel (FIXED: rounded-3xl instead of full circle) -->
+                            <div class="js-carousel relative w-full aspect-square rounded-[2.5rem] border border-white/10 bg-black overflow-hidden hover:border-white/20 transition-all duration-500">
                                 <img src="images/hume-band (1).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-8 transition-opacity duration-700 opacity-100" alt="Hume Band 1">
                                 <img src="images/hume-band (2).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-8 transition-opacity duration-700 opacity-0" alt="Hume Band 2">
                                 <img src="images/hume-band (3).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-8 transition-opacity duration-700 opacity-0" alt="Hume Band 3">
@@ -391,32 +391,30 @@
                                 <img src="images/hume-band (5).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-8 transition-opacity duration-700 opacity-0" alt="Hume Band 5">
                                 <img src="images/hume-band (6).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-8 transition-opacity duration-700 opacity-0" alt="Hume Band 6">
                             </div>
-                            <!-- Orbit Effect -->
-                            <div class="absolute inset-0 rounded-full border border-dashed border-white/5 animate-spin-slow pointer-events-none"></div>
                         </div>
 
                         <!-- Right: Copy (Includes Mobile Visuals) -->
                         <div class="text-left order-1 lg:order-2">
                             
                             <!-- Headline -->
-                            <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight" data-i18n="band_section_title">
+                            <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight tracking-tight text-center lg:text-left" data-i18n="band_section_title">
                                 De Leituras Pontuais <br><span class="text-gray-500">Para Visão Contínua</span>
                             </h2>
 
-                            <!-- MOBILE ONLY CAROUSEL (Appears below title as requested) -->
-                            <div class="block lg:hidden relative w-full max-w-[280px] mx-auto aspect-square rounded-full border border-white/10 bg-black overflow-hidden mb-8">
+                            <!-- MOBILE ONLY CAROUSEL (FIXED: rounded-3xl, centered below title) -->
+                            <div class="block lg:hidden relative w-full max-w-[280px] mx-auto aspect-square rounded-[2rem] border border-white/10 bg-black overflow-hidden mb-8 shadow-2xl">
                                 <div class="js-carousel w-full h-full relative">
-                                    <img src="images/hume-band (1).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-6 transition-opacity duration-700 opacity-100" alt="Hume Band 1">
-                                    <img src="images/hume-band (2).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-6 transition-opacity duration-700 opacity-0" alt="Hume Band 2">
-                                    <img src="images/hume-band (3).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-6 transition-opacity duration-700 opacity-0" alt="Hume Band 3">
-                                    <img src="images/hume-band (4).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-6 transition-opacity duration-700 opacity-0" alt="Hume Band 4">
-                                    <img src="images/hume-band (5).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-6 transition-opacity duration-700 opacity-0" alt="Hume Band 5">
-                                    <img src="images/hume-band (6).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-6 transition-opacity duration-700 opacity-0" alt="Hume Band 6">
+                                    <img src="images/hume-band (1).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-100" alt="Hume Band 1">
+                                    <img src="images/hume-band (2).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 2">
+                                    <img src="images/hume-band (3).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 3">
+                                    <img src="images/hume-band (4).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 4">
+                                    <img src="images/hume-band (5).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 5">
+                                    <img src="images/hume-band (6).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain p-4 transition-opacity duration-700 opacity-0" alt="Hume Band 6">
                                 </div>
                             </div>
                             
                             <!-- Text -->
-                            <p class="text-lg text-gray-400 mb-8 leading-relaxed" data-i18n="band_section_text">
+                            <p class="text-lg text-gray-400 mb-8 leading-relaxed text-center lg:text-left" data-i18n="band_section_text">
                                 O Hume Pod mostra como seu corpo está agora. <br>A <strong>Hume Health Wrist Band</strong> mostra como ele se comporta ao longo do dia e da noite.
                             </p>
 
@@ -437,13 +435,15 @@
                             </div>
 
                             <!-- CTA - OPENS IN NEW TAB - NO ICON -->
-                            <a href="https://www.knownwalk.com/2JCZKZ1X/2266H7JW/" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-white text-brand-dark text-base font-black py-4 px-10 rounded-full hover:bg-gray-200 transition transform active:scale-95 no-underline cursor-pointer tracking-wide">
-                                <span data-i18n="band_cta_button">ADICIONAR BAND AO KIT</span>
-                            </a>
-                            
-                            <p class="text-xs text-gray-600 mt-4 italic" data-i18n="band_note">
-                                “Recomendado para quem deseja acompanhar tendências ao longo do tempo.”
-                            </p>
+                            <div class="text-center lg:text-left">
+                                <a href="https://www.knownwalk.com/2JCZKZ1X/2266H7JW/" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-white text-brand-dark text-base font-black py-4 px-10 rounded-full hover:bg-gray-200 transition transform active:scale-95 no-underline cursor-pointer tracking-wide">
+                                    <span data-i18n="band_cta_button">ADICIONAR BAND AO KIT</span>
+                                </a>
+                                
+                                <p class="text-xs text-gray-600 mt-4 italic" data-i18n="band_note">
+                                    “Recomendado para quem deseja acompanhar tendências ao longo do tempo.”
+                                </p>
+                            </div>
                         </div>
 
                     </div>
