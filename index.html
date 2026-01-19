@@ -152,8 +152,8 @@
                 <div class="lg:col-span-5 lg:sticky lg:top-48">
                     <div class="mb-4 lg:mb-0 relative group">
                         
-                         <!-- Carousel Container -->
-                         <div id="product-carousel" class="relative w-full aspect-square rounded-xl shadow-md border border-gray-100 overflow-hidden bg-gray-50">
+                         <!-- MAIN CAROUSEL Container (Added js-carousel class) -->
+                         <div id="product-carousel" class="js-carousel relative w-full aspect-square rounded-xl shadow-md border border-gray-100 overflow-hidden bg-gray-50">
                             <!-- 1. Main Image (Starts Visible) -->
                             <img src="images/humehealth.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-100" alt="Hume Health Main">
                             
@@ -252,11 +252,11 @@
                                 COMPRE AGORA COM 50% DE DESCONTO
                             </button>
                             
-                            <!-- Wrist Band Button (New Product) -->
-                            <a href="https://www.knownwalk.com/2JCZKZ1X/2266H7JW/" target="_blank" class="flex-1 bg-white border-2 border-brand-dark text-brand-dark text-lg lg:text-xl font-bold py-4 px-4 rounded-xl shadow-md hover:bg-gray-50 transition transform active:scale-95 hover:shadow-xl flex items-center justify-center text-center cursor-pointer no-underline leading-tight">
-                                <i class="fas fa-clock mr-2"></i>
+                            <!-- Wrist Band Button (UPDATED: Anchor to Section) -->
+                            <button onclick="document.getElementById('wrist-band-section').scrollIntoView({behavior: 'smooth'})" class="flex-1 bg-white border-2 border-brand-dark text-brand-dark text-lg lg:text-xl font-bold py-4 px-4 rounded-xl shadow-md hover:bg-gray-50 transition transform active:scale-95 hover:shadow-xl flex items-center justify-center text-center cursor-pointer leading-tight">
+                                <!-- Icon removed -->
                                 <span data-i18n="cta_band">Adquira a Hume Wrist Band</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -354,10 +354,20 @@
                 </div>
             </section>
 
-            <!-- WRIST BAND UPSELL SECTION (NEW) -->
-            <section class="bg-white py-12 px-5 border-t border-gray-200">
+            <!-- WRIST BAND UPSELL SECTION (NEW) - ID ADDED -->
+            <section id="wrist-band-section" class="bg-white py-12 px-5 border-t border-gray-200">
                 <div class="max-w-4xl mx-auto text-center">
                     
+                    <!-- NEW: Small Carousel for Band -->
+                    <div class="js-carousel relative w-full max-w-sm mx-auto aspect-square rounded-xl shadow-md border border-gray-100 overflow-hidden bg-gray-50 mb-8">
+                        <img src="images/hume-band (1).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-100" alt="Hume Band 1">
+                        <img src="images/hume-band (2).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 2">
+                        <img src="images/hume-band (3).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 3">
+                        <img src="images/hume-band (4).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 4">
+                        <img src="images/hume-band (5).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 5">
+                        <img src="images/hume-band (6).png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Band 6">
+                    </div>
+
                     <!-- Headline -->
                     <h2 class="text-2xl md:text-3xl font-black text-brand-dark mb-4 tracking-tight" data-i18n="band_section_title">
                         De Leituras Pontuais Para Visão Contínua
@@ -384,7 +394,7 @@
                         </div>
                     </div>
 
-                    <!-- CTA -->
+                    <!-- CTA - OPENS IN NEW TAB -->
                     <a href="https://www.knownwalk.com/2JCZKZ1X/2266H7JW/" target="_blank" class="inline-flex items-center justify-center bg-white border-2 border-brand-dark text-brand-dark text-lg font-bold py-3 px-8 rounded-xl shadow-md hover:bg-gray-50 transition transform active:scale-95 mb-4 no-underline cursor-pointer">
                         <i class="fas fa-clock mr-2"></i>
                         <span data-i18n="band_cta_button">Adicionar Wrist Band e Ter o Kit Completo</span>
@@ -480,30 +490,30 @@
         // ==========================================
 
         document.addEventListener('DOMContentLoaded', function() {
-            // --- CAROUSEL LOGIC ---
-            const slides = document.querySelectorAll('.carousel-slide');
-            let currentSlide = 0;
-            const slideInterval = 3000; // 3 seconds
+            // --- CAROUSEL LOGIC UPDATED FOR MULTIPLE INSTANCES ---
+            // Find all elements with class 'js-carousel'
+            const carousels = document.querySelectorAll('.js-carousel');
+            
+            carousels.forEach(carousel => {
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                let currentSlide = 0;
+                
+                // If this carousel has slides, start interval
+                if (slides.length > 0) {
+                    setInterval(() => {
+                        // Fade out current
+                        slides[currentSlide].classList.remove('opacity-100');
+                        slides[currentSlide].classList.add('opacity-0');
 
-            function nextSlide() {
-                if (slides.length === 0) return;
+                        // Calculate next
+                        currentSlide = (currentSlide + 1) % slides.length;
 
-                // Fade out current
-                slides[currentSlide].classList.remove('opacity-100');
-                slides[currentSlide].classList.add('opacity-0');
-
-                // Calculate next
-                currentSlide = (currentSlide + 1) % slides.length;
-
-                // Fade in next
-                slides[currentSlide].classList.remove('opacity-0');
-                slides[currentSlide].classList.add('opacity-100');
-            }
-
-            // Start Carousel
-            if (slides.length > 0) {
-                setInterval(nextSlide, slideInterval);
-            }
+                        // Fade in next
+                        slides[currentSlide].classList.remove('opacity-0');
+                        slides[currentSlide].classList.add('opacity-100');
+                    }, 3000); // 3 seconds interval
+                }
+            });
 
             // --- TRANSLATION LOGIC ---
             detectAndTranslate();
@@ -523,12 +533,11 @@
 
         // REDIRECT TO OFFER
         function goToOffer(regionCode) {
-            // Check if it is Germany (DE)
+            // UPDATED: Use window.location.href to update current tab instead of opening new one
             if (regionCode === 'DE') {
-                window.open(LINK_DE, '_blank');
+                window.location.href = LINK_DE;
             } else {
-                // All other countries go to Global link
-                window.open(LINK_GLOBAL, '_blank');
+                window.location.href = LINK_GLOBAL;
             }
         }
 
@@ -827,6 +836,42 @@
                 "band_bullet_3": "مثالي لمن يقدرون الاستمرارية",
                 "band_cta_button": "أضف Wrist Band واحصل على المجموعة الكاملة",
                 "band_note": "“موصى به لمن يرغبون في تتبع الاتجاهات بمرور الوقت.”"
+            },
+             // ADDED: GERMAN (DE)
+            "de": {
+                "fast_shipping": "KOSTENLOSER & SCHNELLER VERSAND",
+                "money_back": "45 TAGE GELD-ZURÜCK-GARANTIE",
+                "special_offer": "SONDERANGEBOT | 50% RABATT",
+                "headline": "Hören Sie auf zu raten. Fangen Sie an zu messen.",
+                "subheadline": "Ein intelligentes Gerät für alle, die echte Daten leeren Versprechungen vorziehen, wenn es um Gesundheit und Langlebigkeit geht.",
+                "cta_button": "JETZT KAUFEN MIT 50% RABATT",
+                "cta_band": "Hume Wrist Band holen",
+                "region_title": "Verfügbarkeit in Ihrer Region prüfen",
+                "region_subtitle": "Wählen Sie Ihr Lieferziel, um exklusives Inventar freizuschalten.",
+                "link_privacy": "Datenschutzrichtlinie",
+                "link_terms": "Nutzungsbedingungen",
+                "link_contact": "Kontakt",
+                "link_shipping": "Versand & Lieferung",
+                "link_returns": "Rücksendungen & Erstattungen",
+                "benefit_1": "<strong>Keine Zauberformeln:</strong> Nur klare Informationen darüber, was in Ihrem Körper passiert.",
+                "benefit_2": "<strong>Konsistente Überwachung:</strong> Sehen Sie Entwicklung, Muster und Trends – nicht nur isolierte Zahlen.",
+                "benefit_3": "<strong>Entscheidungswerkzeug, keine leere Motivation:</strong> Ideal für alle, die ihre Gesundheit ernst nehmen.",
+                "benefit_4": "<strong>Einfach zu bedienen, schwer zu ignorieren:</strong> Sobald Sie die Daten sehen, können Sie sie nicht mehr ignorieren.",
+                "closing_statement": "\"Daten lügen nicht. Der Rest ist Lärm.\"",
+                "social_proof": "8K+ Glückliche Kunden weltweit",
+                "rating": "4.7 Durchschnittliche Bewertung",
+                "low_stock": "Geringer Bestand",
+                "available": "Verfügbar",
+                "selling_fast": "Verkauft sich schnell",
+                "verified_reviews": "1.000+ Verifizierte Bewertungen",
+                // Band Section
+                "band_section_title": "Von punktuellen Messungen zu kontinuierlicher Sicht",
+                "band_section_text": "Der Hume Pod zeigt, wie Ihr Körper ist. Das Hume Health Wrist Band zeigt, wie er sich den Tag über verhält. Zusammen bilden sie ein komplettes Körper-Tracking-System.",
+                "band_bullet_1": "Tägliche Überwachung von Aktivität und physischen Mustern",
+                "band_bullet_2": "Ergänzt die Daten des Hume Pod",
+                "band_bullet_3": "Ideal für alle, die Konsistenz schätzen",
+                "band_cta_button": "Wrist Band hinzufügen und komplettes Set erhalten",
+                "band_note": "„Empfohlen für alle, die Trends im Laufe der Zeit verfolgen möchten.“"
             }
         };
 
