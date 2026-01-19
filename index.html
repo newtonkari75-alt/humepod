@@ -148,25 +148,26 @@
                         
                          <!-- Carousel Container -->
                          <div id="product-carousel" class="relative w-full aspect-square rounded-xl shadow-md border border-gray-100 overflow-hidden bg-gray-50">
-                            <!-- Image 1 (Active by default) -->
-                            <img src="images/humehealth.webp" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-100" alt="Hume Body Pod View 1">
-                            <!-- Image 2 -->
-                            <img src="images/humehealth0.webp" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod View 2">
-                            <!-- Image 3 -->
-                            <img src="images/humehealth1.webp" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod View 3">
-                            <!-- Image 4 -->
-                            <img src="images/humehealth2.webp" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod View 4">
-                            <!-- Image 5 -->
-                            <img src="images/humehealth3.webp" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod View 5">
-                            <!-- Image 6 -->
-                            <img src="images/humehealth4.webp" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod View 6">
+                            <!-- 1. Main Image (Starts Visible) -->
+                            <img src="images/humehealth.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-100" alt="Hume Health Main">
+                            
+                            <!-- 2. Hume Wrist Band (NEW) -->
+                            <img src="images/band-hume.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Wrist Band">
 
-                            <!-- New Images (Hume Pod Series) -->
-                            <img src="images/hume-pod.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod New 1">
-                            <img src="images/hume-pod1.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod New 2">
-                            <img src="images/hume-pod2.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod New 3">
-                            <img src="images/hume-pod3.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod New 4">
-                            <img src="images/hume-pod4.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Body Pod New 5">
+                            <!-- 3. Hume Pod Base -->
+                            <img src="images/hume-pod.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Pod View 1">
+                            
+                            <!-- 4. Hume Pod 1 -->
+                            <img src="images/hume-pod1.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Pod View 2">
+                            
+                            <!-- 5. Hume Pod 2 -->
+                            <img src="images/hume-pod2.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Pod View 3">
+                            
+                            <!-- 6. Hume Pod 3 -->
+                            <img src="images/hume-pod3.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Pod View 4">
+                            
+                            <!-- 7. Hume Pod 4 -->
+                            <img src="images/hume-pod4.png" class="carousel-slide absolute top-0 left-0 w-full h-full object-contain transition-opacity duration-700 opacity-0" alt="Hume Pod View 5">
                          </div>
                          
                     </div>
@@ -233,10 +234,18 @@
                             </div>
                         </div>
 
-                        <!-- CTA Button (Scrolls to Region Selector) -->
-                        <button onclick="scrollToSelector()" class="w-full bg-brand-dark text-white text-xl lg:text-2xl font-bold py-4 lg:py-5 rounded-xl shadow-lg hover-bg-brand-dark transition transform active:scale-95 mb-8 lg:mb-6 hover:shadow-2xl cursor-pointer" data-i18n="cta_button">
-                            GET 50% OFF — LIMITED TIME ONLY
-                        </button>
+                        <!-- CTA Buttons Container -->
+                        <div class="flex flex-col md:flex-row gap-4 mb-8 lg:mb-6">
+                            <!-- Main Button (Scrolls to Region) -->
+                            <button onclick="scrollToSelector()" class="flex-1 bg-brand-dark text-white text-lg lg:text-xl font-bold py-4 px-4 rounded-xl shadow-lg hover-bg-brand-dark transition transform active:scale-95 hover:shadow-2xl cursor-pointer leading-tight" data-i18n="cta_button">
+                                GET 50% OFF — LIMITED TIME ONLY
+                            </button>
+                            
+                            <!-- Wrist Band Button (New Product) -->
+                            <a href="https://www.knownwalk.com/2JCZKZ1X/2266H7JW/" target="_blank" class="flex-1 bg-white border-2 border-brand-dark text-brand-dark text-lg lg:text-xl font-bold py-4 px-4 rounded-xl shadow-md hover:bg-gray-50 transition transform active:scale-95 hover:shadow-xl flex items-center justify-center text-center cursor-pointer no-underline leading-tight">
+                                <span data-i18n="cta_band">Get Hume Wrist Band</span>
+                            </a>
+                        </div>
                     </div>
 
                 </div>
@@ -561,6 +570,7 @@
                 "headline": "The Ultimate At-Home Health Checkup — Anytime, Anywhere.",
                 "subheadline": "Meet the Hume Pod — a next-generation body-scanning device that gives you complete control over your weight, longevity and overall health.",
                 "cta_button": "GET 50% OFF — LIMITED TIME ONLY",
+                "cta_band": "Get Hume Wrist Band",
                 "region_title": "Check Availability in Your Region",
                 "region_subtitle": "Select your shipping destination to unlock exclusive inventory.",
                 "link_privacy": "Privacy Policy",
@@ -583,7 +593,8 @@
                 "special_offer": "OFERTA POR TEMPO LIMITADO | 50% DE DESCONTO",
                 "headline": "O Check-up de Saúde Definitivo em Casa — A Qualquer Hora, em Qualquer Lugar.",
                 "subheadline": "Conheça o Hume Pod — um dispositivo de escaneamento corporal de última geração que lhe dá controle total sobre seu peso, longevidade e saúde geral.",
-                "cta_button": "GARANTIR 50% DE DESCONTO — POR TEMPO LIMITADO",
+                "cta_button": "GARANTIR 50% DE DESCONTO",
+                "cta_band": "Adquira a Hume Wrist Band",
                 "region_title": "Verificar Disponibilidade na Sua Região",
                 "region_subtitle": "Selecione seu destino de envio para liberar o estoque exclusivo.",
                 "link_privacy": "Política de Privacidade",
@@ -606,7 +617,8 @@
                 "special_offer": "OFERTA LIMITADA | 50% OFF",
                 "headline": "El Chequeo de Salud Definitivo en Casa — En Cualquier Momento, En Cualquier Lugar.",
                 "subheadline": "Conoce el Hume Pod — un dispositivo de escaneo corporal de próxima generación que te da control total sobre tu peso, longevidad y salud general.",
-                "cta_button": "OBTENER 50% OFF — TIEMPO LIMITADO",
+                "cta_button": "OBTENER 50% OFF",
+                "cta_band": "Obtén la Hume Wrist Band",
                 "region_title": "Verificar Disponibilidad",
                 "region_subtitle": "Selecciona tu destino para ver el inventario exclusivo.",
                 "link_privacy": "Política de Privacidad",
@@ -629,7 +641,8 @@
                 "special_offer": "OFFRE LIMITÉE | 50% DE RÉDUCTION",
                 "headline": "Le Bilan de Santé Ultime à Domicile — N'importe quand, N'importe où.",
                 "subheadline": "Découvrez le Hume Pod — un appareil de scan corporel de nouvelle génération qui vous donne un contrôle total sur votre poids, votre longévité et votre santé globale.",
-                "cta_button": "OBTENEZ 50% DE RÉDUCTION — TEMPS LIMITÉ",
+                "cta_button": "OBTENEZ 50% DE RÉDUCTION",
+                "cta_band": "Obtenez la Hume Wrist Band",
                 "region_title": "Vérifier la Disponibilité dans Votre Région",
                 "region_subtitle": "Sélectionnez votre destination d'expédition pour débloquer l'inventaire exclusif.",
                 "link_privacy": "Politique de Confidentialité",
@@ -652,7 +665,8 @@
                 "special_offer": "מבצע לזמן מוגבל | 50% הנחה",
                 "headline": "בדיקת הבריאות הביתית האולטימטיבית — בכל זמן, בכל מקום.",
                 "subheadline": "הכירו את ה-Hume Pod — מכשיר סריקת גוף מהדור הבא שנותן לכם שליטה מלאה על המשקל, אריכות הימים והבריאות הכללית שלכם.",
-                "cta_button": "קבלו 50% הנחה — לזמן מוגבל בלבד",
+                "cta_button": "קבלו 50% הנחה",
+                "cta_band": "קבל את Hume Wrist Band",
                 "region_title": "בדוק זמינות באזורך",
                 "region_subtitle": "בחר את יעד המשלוח שלך כדי לפתוח מלאי בלעדי.",
                 "link_privacy": "מדיניות פרטיות",
@@ -675,7 +689,8 @@
                 "special_offer": "عرض خاص لفترة محدودة | خصم 50%",
                 "headline": "الفحص الصحي المنزلي الشامل — في أي وقت وفي أي مكان.",
                 "subheadline": "تعرف على Hume Pod — جهاز مسح الجسم من الجيل التالي الذي يمنحك سيطرة كاملة على وزنك، وطول عمرك، وصحتك العامة.",
-                "cta_button": "احصل على خصم 50% — لفترة محدودة فقط",
+                "cta_button": "احصل على خصم 50%",
+                "cta_band": "احصل على Hume Wrist Band",
                 "region_title": "تحقق من التوفر في منطقتك",
                 "region_subtitle": "اختر وجهة الشحن لفتح المخزون الحصري.",
                 "link_privacy": "سياسة الخصوصية",
